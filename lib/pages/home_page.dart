@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'animate_list_route.dart';
 import 'animation_builder_screen.dart';
+import 'animation_counter_screen.dart';
 import 'animation_hero.dart';
 import 'animation_route_button.dart';
 import 'animation_stagger.dart';
@@ -78,6 +79,9 @@ class HomePage extends StatelessWidget {
     RouteConfig(route: AnimationRoute.routeName, title: '路由切换动画'),
     // RouteConfig(route: AnimationHero.routeName, title: '自实现hero动画'),
     RouteConfig(route: StaggerRoute.routeName, title: '交织动画（多个动画的组合）'),
+    RouteConfig(
+        route: AnimatedSwitcherCounterRoute.routeName,
+        title: '动画切换（AnimatedSwitcher）'),
   ];
 
   @override

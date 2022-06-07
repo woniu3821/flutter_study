@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../pages/animation_builder_screen.dart';
+import '../../pages/animation_counter_screen.dart';
 import '../../pages/animation_hero.dart';
 import '../../pages/animation_route_button.dart';
 import '../../pages/animation_stagger.dart';
@@ -56,8 +57,10 @@ abstract class Routes {
     GestureRecognizerRoute.routeName: (context) => GestureRecognizerRoute(),
     ScaleAnimationRoute.routeName: (context) => ScaleAnimationRoute(),
     ScaleAnimationByBuilder.routeName: (context) => ScaleAnimationByBuilder(),
-    AnimationRoute.routeName: (context) => AnimationRoute(),
+    AnimationRoute.routeName: (context) => const AnimationRoute(),
     AnimationHero.routeName: (context) => AnimationHero(),
     StaggerRoute.routeName: (context) => StaggerRoute(),
+    AnimatedSwitcherCounterRoute.routeName: (context) =>
+        AnimatedSwitcherCounterRoute(),
   };
 }
