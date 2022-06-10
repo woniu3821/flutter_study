@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../pages/animation_builder_screen.dart';
 import '../../pages/animation_counter_screen.dart';
+import '../../pages/animation_default.dart';
 import '../../pages/animation_hero.dart';
 import '../../pages/animation_route_button.dart';
+import '../../pages/animation_slider_counter.dart';
 import '../../pages/animation_stagger.dart';
+import '../../pages/custom_widget.dart';
 import '../../pages/home_page.dart';
 import '../../pages/animate_list_route.dart';
 import '../../pages/container_page.dart';
@@ -36,10 +39,8 @@ abstract class Routes {
     ResponsePage.routeName: (context) => ResponsePage(),
     ContainerPage.routeName: (context) => ContainerPage(),
     InfiniteListView.routeName: (context) => InfiniteListView(),
-    ScrollControllerTestRoute.routeName: (context) =>
-        ScrollControllerTestRoute(),
-    ScrollNotificationTestRoute.routeName: (context) =>
-        ScrollNotificationTestRoute(),
+    ScrollControllerTestRoute.routeName: (context) => ScrollControllerTestRoute(),
+    ScrollNotificationTestRoute.routeName: (context) => ScrollNotificationTestRoute(),
     AnimatedListRoute.routeName: (context) => AnimatedListRoute(),
     InfiniteGridView.routeName: (context) => InfiniteGridView(),
     TabPageView.routeName: (context) => TabPageView(),
@@ -60,7 +61,9 @@ abstract class Routes {
     AnimationRoute.routeName: (context) => const AnimationRoute(),
     AnimationHero.routeName: (context) => AnimationHero(),
     StaggerRoute.routeName: (context) => StaggerRoute(),
-    AnimatedSwitcherCounterRoute.routeName: (context) =>
-        AnimatedSwitcherCounterRoute(),
+    AnimatedSwitcherCounterRoute.routeName: (context) => AnimatedSwitcherCounterRoute(),
+    AnimatedSliderCounterRoute.routeName: (context) => AnimatedSliderCounterRoute(),
+    AnimatedWidgetsTest.routeName: (context) => AnimatedWidgetsTest(),
+    CustomWidget.routeName: (context) => CustomWidget(),
   };
 }

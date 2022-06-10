@@ -18,19 +18,19 @@ class _AnimatedSwitcherCounterRouteState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('计数器'),
+        title: const Text('计数器'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AnimatedSwitcher(
-              duration: Duration(
+              duration: const Duration(
                 milliseconds: 500,
               ),
               transitionBuilder: (Widget child, Animation<double> animation) {
                 //执行缩放动画
-                return ScaleTransition(child: child, scale: animation);
+                return ScaleTransition(scale: animation, child: child);
               },
               child: Text(
                 '$_count',
@@ -45,7 +45,7 @@ class _AnimatedSwitcherCounterRouteState
                   _count++;
                 });
               },
-              child: Text('+1'),
+              child: const Text('+1'),
             )
           ],
         ),

@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 import 'animate_list_route.dart';
 import 'animation_builder_screen.dart';
 import 'animation_counter_screen.dart';
+import 'animation_default.dart';
 import 'animation_hero.dart';
 import 'animation_route_button.dart';
+import 'animation_slider_counter.dart';
 import 'animation_stagger.dart';
 import 'container_page.dart';
 import 'custom_scroll_view.dart';
+import 'custom_widget.dart';
 import 'dialog_route.dart';
 import 'drag_route.dart';
 import 'fixed_scroll_bar.dart';
@@ -50,22 +53,16 @@ class HomePage extends StatelessWidget {
     RouteConfig(route: ScrollNotificationTestRoute.routeName, title: '滚动监听'),
     RouteConfig(route: AnimatedListRoute.routeName, title: '列表加载动画'),
     RouteConfig(route: InfiniteGridView.routeName, title: '异步加载网格数据'),
-    RouteConfig(
-        route: TabPageView.routeName, title: 'pageView页面切换(支持keepAlive)'),
+    RouteConfig(route: TabPageView.routeName, title: 'pageView页面切换(支持keepAlive)'),
     RouteConfig(route: TabViewRoute.routeName, title: 'tabBar导航切换'),
-    RouteConfig(
-        route: CustomScrollViewRoute.routeName,
-        title: '两个列表合并成一个滚动列表（CustomScrollView）'),
+    RouteConfig(route: CustomScrollViewRoute.routeName, title: '两个列表合并成一个滚动列表（CustomScrollView）'),
     RouteConfig(route: FixedScrollBarRoute.routeName, title: '滚动到顶部头部伸缩'),
     GroupConfig('功能型Widget'),
     RouteConfig(route: WillPopScopeTestRoute.routeName, title: '导航返回拦截'),
     RouteConfig(route: AutoNavBarColor.routeName, title: '根据背景色自动改变字体颜色'),
     RouteConfig(route: ThemeTestRoute.routeName, title: '测试改变主题色'),
-    RouteConfig(
-        route: ValueListenableRoute.routeName, title: '按需监听数据变化rebuild'),
-    RouteConfig(
-        route: FutureBuilderRoute.routeName,
-        title: '异步UI更新（FutureBuilder、StreamBuilder）'),
+    RouteConfig(route: ValueListenableRoute.routeName, title: '按需监听数据变化rebuild'),
+    RouteConfig(route: FutureBuilderRoute.routeName, title: '异步UI更新（FutureBuilder、StreamBuilder）'),
     RouteConfig(route: DialogTestRoute.routeName, title: 'Dialog 对话框'),
     GroupConfig('事件处理与通知'),
     RouteConfig(route: DragRoute.routeName, title: '手势拖动、滑动'),
@@ -73,15 +70,15 @@ class HomePage extends StatelessWidget {
     RouteConfig(route: GestureRecognizerRoute.routeName, title: '手势识别文字变色'),
     GroupConfig('动画'),
     RouteConfig(route: ScaleAnimationRoute.routeName, title: '基础缩放动画'),
-    RouteConfig(
-        route: ScaleAnimationByBuilder.routeName,
-        title: 'AnimatedBuilder封装复用动画'),
+    RouteConfig(route: ScaleAnimationByBuilder.routeName, title: 'AnimatedBuilder封装复用动画'),
     RouteConfig(route: AnimationRoute.routeName, title: '路由切换动画'),
     // RouteConfig(route: AnimationHero.routeName, title: '自实现hero动画'),
     RouteConfig(route: StaggerRoute.routeName, title: '交织动画（多个动画的组合）'),
-    RouteConfig(
-        route: AnimatedSwitcherCounterRoute.routeName,
-        title: '动画切换（AnimatedSwitcher）'),
+    RouteConfig(route: AnimatedSwitcherCounterRoute.routeName, title: '渐隐动画切换（AnimatedSwitcher）'),
+    RouteConfig(route: AnimatedSliderCounterRoute.routeName, title: '平移动画切换（AnimatedSwitcher）'),
+    RouteConfig(route: AnimatedWidgetsTest.routeName, title: '预置的动画过渡组件'),
+    GroupConfig('自定义组件'),
+    RouteConfig(route: CustomWidget.routeName, title: '自定义组件'),
   ];
 
   @override
